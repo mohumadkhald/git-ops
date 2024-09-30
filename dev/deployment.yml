@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: e2e-pipeline-ci_cd:latest
+  name: e2e-pipeline-ci_cd
 spec:
   selector:
     matchLabels:
-      app: e2e-pipeline-ci_cd:latest
+      app: e2e-pipeline-ci_cd
   replicas: 3
   template:
     metadata:
       labels:
-        app: e2e-pipeline-ci_cd:latest
+        app: e2e-pipeline-ci_cd
     spec:
       containers:
         - name: e2e-pipeline-ci_cd:latest
