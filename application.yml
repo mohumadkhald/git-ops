@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/mohumadkhald/git-ops
     targetRevision: HEAD
-    path: dev
+    path: ./dev
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
