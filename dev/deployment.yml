@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: e2e-pipeline-ci_cd
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
