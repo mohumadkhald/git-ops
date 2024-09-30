@@ -4,8 +4,11 @@ pipeline
 
     environment {
         APP_NAME = "e2e-pipeline-ci_cd"
-        
 
+    }
+
+    parameters {
+        string(name: "REPLICAS", defaultValue: '2', description: 'Num of the Application replicas')
     }
 
     stages {
@@ -25,6 +28,7 @@ pipeline
             steps {
                 sh '''
                 cat ./dev/deployment.yml
+                sed -i "s/replicas:.*/replicas: ${REPLICAS}/g" ./dev/deployment.yml
                 sed -i "s/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g" ./dev/deployment.yml
                 cat ./dev/deployment.yml
                 '''
