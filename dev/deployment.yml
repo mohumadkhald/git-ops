@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: e2e-pipeline
-          image: mohumadkhald/e2e-pipeline-ci_cd:1.0.0-24
+          image: mohumadkhald/e2e-pipeline-ci_cd:1.0.0-25
           ports:
             - containerPort: 8080
