@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: e2e-pipeline
+  type: NodePort
   ports:
     - port: 8080
       protocol: TCP
