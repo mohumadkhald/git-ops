@@ -1,19 +1,19 @@
 # apiVersion: apps/v1
 # kind: Deployment
 # metadata:
-#   name: e2e-pipeline-ci_cd
+#   name: e2e-pipeline-ci_cd:latest
 # spec:
 #   selector:
 #     matchLabels:
-#       app: e2e-pipeline-ci_cd
+#       app: e2e-pipeline-ci_cd:latest
 #   replicas: 3
 #   template:
 #     metadata:
 #       labels:
-#         app: e2e-pipeline-ci_cd
+#         app: e2e-pipeline-ci_cd:latest
 #     spec:
 #       containers:
-#         - name: e2e-pipeline-ci_cd
+#         - name: e2e-pipeline-ci_cd:latest
 #           image: mohumadkhald/e2e-pipeline-ci_cd:latest
 #           ports:
 #             - containerPort: 8080
